@@ -1,2 +1,53 @@
+body {
+  margin: 0; }
+
 #header {
-  width: 1280px; }
+  display: block;
+  position: relative;
+  width: 1280px;
+  height: 347px;
+  margin: 0 auto;
+  background-image: url("../img/logo-backdrop.jpg");
+  background-color: blue; }
+
+#header #logo {
+  display: block;
+  margin: 0 auto; }
+
+#logo-and-text-box {
+  padding-top: 100px; }
+
+#logo-caption {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: white;
+  margin-left: 10px;
+  font-family: Roboto, sans-serif; }
+
+#nav-bar-top {
+  box-sizing: border-box;
+  width: 1280px;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 16px;
+  margin: 0 auto;
+  background-color: #4e5e2c;
+  font-family: Roboto, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 6px; }
+
+#nav-bar-top ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+#nav-bar-top ul li {
+  display: inline; }
+
+.dark-green-spacer {
+  width: 1280px;
+  margin: 0 auto;
+  height: 3px;
+  background-color: #323d1c; }

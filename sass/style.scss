@@ -1,4 +1,75 @@
 
+body {
+	margin: 0;
+}
+
+//sass variables
+//make sure you use mixins for border radius, shadows etc
+
+$font-header-small: Roboto, sans-serif;
+$main-body-font: Roboto, sans-serif;
+$font-header-color: white;
+$primary-color: #4E5E2C;
+$primary-color-dark: #323d1c;
+
+// Header, logo
+
 #header {
+	display: block;
+	position: relative;
 	width: 1280px;
+	height: 347px;
+	margin: 0 auto;
+	background-image: url("../img/logo-backdrop.jpg"); 
+	background-color: blue;
+}
+
+#header #logo {
+	display: block;
+	margin: 0 auto;
+}
+
+//align logo and caption to centre of box
+#logo-and-text-box {
+	padding-top: 100px;
+}
+//p tag for the text below the image logo
+#logo-caption {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	color: $font-header-color;
+	margin-left: 10px;
+	font-family: $font-header-small;
+}
+
+#nav-bar-top {
+	box-sizing: border-box;
+	width: 1280px;
+	height: 50px;
+	padding-left: 20px;
+	padding-top: 16px;
+	margin: 0 auto;
+	background-color: $primary-color;
+	font-family: $font-header-small;
+	color: $font-header-color;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+}
+
+#nav-bar-top ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+#nav-bar-top ul li {
+	display: inline;
+}
+
+.dark-green-spacer {
+	width: 1280px;
+	margin: 0 auto;
+	height: 3px;
+	background-color: $primary-color-dark;
 }
