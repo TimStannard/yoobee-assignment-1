@@ -1,3 +1,11 @@
+//tablet size, and center all elements
+@mixin set-tablet-width-and-centre {
+	width: 90%;
+	// margin: 0 auto;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
 
 body {
 	margin: 0;
@@ -8,20 +16,138 @@ body {
 
 $font-header-small: Roboto, sans-serif;
 $main-body-font: Roboto, sans-serif;
+$content-header-font: Oswald, sans-serif;
 $font-header-color: white;
 $primary-color: #4E5E2C;
 $primary-color-dark: #323d1c;
+$primary-color-light: #7e9645;
+$elements-shadow-color: #A9A9A9;
+
+//popups
+//background of add popup
+.add-item-popup {
+    display: none; 
+    position: fixed; 
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: fade-in 0.2s;
+    transition: all 0.2s ease;
+}
+// content in popup
+.add-item-content {
+	display: block;
+	border-radius: 15px;
+	font-family: $main-body-font;
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding-left: 30px;
+    padding-top: 0px;
+    border: 3px solid $primary-color;
+    width: 600px; /* Could be more or less, depending on screen size */
+    height: auto;
+    box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+
+}
+
+@keyframes fade-in{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.close-add-menu {
+    color: $primary-color-dark;
+    float: right;
+    font-size: 45px;
+    font-weight: bold;
+    padding-right: 6px;
+    transition: all 0.2s ease;
+}
+
+.close-add-menu:hover,
+.close-add-menu:focus {
+    color: #c71b00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-item-image {
+	width: 200px;
+	padding-top: 20px;
+	// background-color: blue;
+	position: relative;
+	float: left;
+
+}
+.popup-item-description {
+	width: 300px;
+	padding-top: 30px;
+	// background-color: red;
+	float: left;
+	display: inline;
+	font-family: $main-body-font;
+}
+
+.add-sides-checkbox-set {
+	padding: 0px;
+	margin: 0px;
+
+}
+.checkbox-spacing {
+	margin-right: 7px;
+	margin-top: 1px;
+}
+
+.instructions-input-box {
+font-size: 15px;
+-webkit-appearance : none;
+}
+
+//spacer class for small heading within add pop-up box
+.padding-top-small-spacer {
+	padding-top: 30px;
+}
+
+.popup-add-button-quantity-div {
+	display: block;
+	padding-top: 5px;
+	padding-right: 32px;
+	margin-top: 15px;
+	float:right;
+	padding-bottom: 25px;
+	// background-color: red;
+}
+
+#add-quantity-dropdown
+{
+	margin-top: 15px;
+	margin-right: 20px;
+	font-size: 15px;
+}
+
+
+
 
 // Header, logo
 
 #header {
 	display: block;
 	position: relative;
-	width: 1280px;
+	@include set-tablet-width-and-centre;
 	height: 347px;
-	margin: 0 auto;
 	background-image: url("../img/logo-backdrop.jpg"); 
-	background-color: blue;
+	background-color: $primary-color-dark;
 }
 
 #header #logo {
@@ -45,31 +171,164 @@ $primary-color-dark: #323d1c;
 
 #nav-bar-top {
 	box-sizing: border-box;
-	width: 1280px;
-	height: 50px;
-	padding-left: 20px;
-	padding-top: 16px;
-	margin: 0 auto;
+	@include set-tablet-width-and-centre;
+	height: 55px;
+	padding-top: 6px;
 	background-color: $primary-color;
 	font-family: $font-header-small;
 	color: $font-header-color;
 	text-transform: uppercase;
-	letter-spacing: 6px;
+	letter-spacing: 3px;
+ 	box-shadow: 0 6px 6px -1px $elements-shadow-color;
+ 	border-bottom-left-radius: 15px; 
+ 	border-bottom-right-radius: 15px; 
+ 	padding-left: 10px;
 }
+
+.nav-icon{
+	padding-left: 5px;
+	padding-right: 20px;
+
+	}
 
 #nav-bar-top ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	margin-top: 10px;
 
 }
 #nav-bar-top ul li {
 	display: inline;
+
+}
+.nav-item {	
+	margin-right: 0px;
+
 }
 
 .dark-green-spacer {
-	width: 1280px;
-	margin: 0 auto;
+@include set-tablet-width-and-centre;
 	height: 3px;
 	background-color: $primary-color-dark;
+}
+
+.menu-dropdown {
+	margin-left: 10px;
+	border: 0;
+	font-size: 15px;
+	width: 150px;
+}
+
+#first-nav-item {
+	margin-left: 20px;
+}
+
+
+//body content
+//header for menu list
+#body-content {
+@include set-tablet-width-and-centre;
+position: relative;
+height: 2000px;
+}
+
+.content-header-text {
+ margin-top: 60px;
+ text-align: center;
+ font-family: $content-header-font;
+ font-size: 35px;
+ font-weight: bold;
+}
+
+.line-leaf {
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+//menu items
+.menu-item {
+	float: left;
+	margin-left: 2.5%;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	width: 47.5%;
+	height: 200px;
+	// background-color: blue;
+	overflow: hidden;
+}
+.menu-image {
+	float:left;
+	width: 45%;
+
+}
+.menu-image-thumbnail {
+	border-radius: 15px;
+	height: 125px;
+	width: 155px;
+	margin-top: 10px;
+	box-shadow: 0 6px 6px 0px $elements-shadow-color;
+}
+.menu-item-text {
+	width: 55%;
+	float:left;
+	height: 140px;
+	font-family: $main-body-font;
+	position: relative;
+	// background-color: blue;
+
+}
+.item-text-header {
+	font-weight: bold;
+	font-family: $content-header-font;
+	font-size: 22px;
+	margin-top: 5px;
+}
+
+//space the price and add button further to bottom
+.price-and-add-button {
+	line-height: 50px;
+	margin-top: 20px;	
+	position: relative;
+	// background-color: blue;
+	display: block;
+}
+
+.add-button {
+
+    background-color: $primary-color;
+    float: right;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
+    box-shadow: 0 6px 6px 0px $elements-shadow-color;
+    transition: all 0.2s ease;
+}
+
+.add-button:hover,
+.add-button:focus {
+    background-color: $primary-color-light;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+//footer ordering cart
+
+.footer-cart {
+	display: none;
+	position: fixed;
+	bottom:35%; //35% works on responsive tablet
+    right:5%;
+    animation: fade-in 0.2s;
+    transition: all 0.2s ease;
+    z-index: 1;
 }
