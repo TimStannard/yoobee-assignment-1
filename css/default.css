@@ -92,10 +92,8 @@ body {
   float: right;
   padding-bottom: 25px; }
 
-#add-quantity-dropdown {
-  margin-top: 15px;
-  margin-right: 20px;
-  font-size: 15px; }
+#add-eggs-from-popup {
+  margin-left: 20px; }
 
 #header {
   display: block;
@@ -134,7 +132,7 @@ body {
   color: white;
   text-transform: uppercase;
   letter-spacing: 3px;
-  box-shadow: 0 6px 6px -1px darkgray;
+  box-shadow: 0 6px 6px -1px #c4c4c4;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   padding-left: 10px; }
@@ -147,7 +145,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-top: 10px; }
+  margin-top: 8px; }
 
 #nav-bar-top ul li {
   display: inline; }
@@ -169,7 +167,17 @@ body {
   width: 150px; }
 
 #first-nav-item {
-  margin-left: 20px; }
+  margin-left: 5px;
+  margin-right: 3px; }
+
+#middle-menu-icon {
+  margin-left: 30px; }
+
+.float-right {
+  float: right; }
+
+#search-icon {
+  margin-top: 4px; }
 
 #body-content {
   width: 90%;
@@ -208,7 +216,7 @@ body {
   height: 125px;
   width: 155px;
   margin-top: 10px;
-  box-shadow: 0 6px 6px 0px darkgray; }
+  box-shadow: 0 6px 6px 0px #c4c4c4; }
 
 .menu-item-text {
   width: 55%;
@@ -242,7 +250,7 @@ body {
   font-size: 16px;
   margin: 1px 2px;
   cursor: pointer;
-  box-shadow: 0 6px 6px 0px darkgray;
+  box-shadow: 0 6px 6px 0px #c4c4c4;
   transition: all 0.2s ease; }
 
 .add-button:hover,
@@ -251,11 +259,49 @@ body {
   color: white;
   cursor: pointer; }
 
+.nav-button {
+  background-color: #7e9645;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 5px 22px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease; }
+
+.quantity-button {
+  background-color: #4e5e2c;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 6px 0px #c4c4c4; }
+
+.menu-items-list {
+  margin: 0; }
+
 .footer-cart {
   display: none;
   position: fixed;
-  bottom: 35%;
+  bottom: 2.5%;
   right: 5%;
   animation: fade-in 0.2s;
   transition: all 0.2s ease;
   z-index: 1; }
+
+.cart-button {
+  background-color: white;
+  box-shadow: 0 6px 6px 0px #c4c4c4;
+  color: #4e5e2c;
+  border: 3px solid #4e5e2c; }

@@ -21,7 +21,7 @@ $font-header-color: white;
 $primary-color: #4E5E2C;
 $primary-color-dark: #323d1c;
 $primary-color-light: #7e9645;
-$elements-shadow-color: #A9A9A9;
+$elements-shadow-color: #c4c4c4;
 
 //popups
 //background of add popup
@@ -129,13 +129,9 @@ font-size: 15px;
 	// background-color: red;
 }
 
-#add-quantity-dropdown
-{
-	margin-top: 15px;
-	margin-right: 20px;
-	font-size: 15px;
+#add-eggs-from-popup {
+margin-left: 20px;
 }
-
 
 
 
@@ -195,7 +191,7 @@ font-size: 15px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	margin-top: 10px;
+	margin-top: 8px;
 
 }
 #nav-bar-top ul li {
@@ -221,9 +217,20 @@ font-size: 15px;
 }
 
 #first-nav-item {
-	margin-left: 20px;
+	margin-left: 5px;
+	margin-right: 3px;
 }
 
+#middle-menu-icon {
+	margin-left: 30px;
+}
+
+.float-right {
+	float: right;
+}
+#search-icon {
+		margin-top: 4px;
+}
 
 //body content
 //header for menu list
@@ -320,15 +327,61 @@ height: 2000px;
 
 }
 
+//menu buttons
+
+.nav-button {
+
+    background-color: $primary-color-light;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 22px;
+    text-align: center;
+	text-transform: uppercase;
+    display: inline-block;
+    font-size: 14px;
+    // margin: 1px 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quantity-button {
+	background-color: $primary-color;
+	// border: 3px solid $primary-color-light;
+	border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+	text-transform: uppercase;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 6px 0px $elements-shadow-color;
+}
+
+ .menu-items-list {
+ 	margin: 0;
+ }
 
 //footer ordering cart
 
 .footer-cart {
 	display: none;
 	position: fixed;
-	bottom:35%; //35% works on responsive tablet
+	bottom:2.5%; //35% works on responsive tablet
     right:5%;
     animation: fade-in 0.2s;
     transition: all 0.2s ease;
     z-index: 1;
+}
+
+.cart-button {
+	background-color: white;
+    box-shadow: 0 6px 6px 0px $elements-shadow-color;
+	color: $primary-color;
+	border: 3px solid $primary-color;
 }

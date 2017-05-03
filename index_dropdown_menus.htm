@@ -9,7 +9,6 @@
 <body>
 	<div id="content-wrapper">
 		<div id="header"> 
-								<i class="fa fa-home" aria-hidden="true"></i>
 			<div id="logo-and-text-box">
 				<img src="img/olive-logo.png" id="logo" alt ="Olive Restaurant">
 				<p id="logo-caption">In-house ordering system</p>
@@ -18,34 +17,27 @@
 		<div class="dark-green-spacer">
 		</div>
 		<div id="nav-bar-top">
-			<ul class="menu-items-list">
+			<ul>
 				<li class="nav-item" id="first-nav-item">
+					Choose your Menu:
+					<select class="menu-dropdown">
+					  <option value="breakfast-menu-item">Breakfast</option>
+					  <option value="lunch-menu-item">Lunch</option>
+					</select>
+				</li>
+				<li class="nav-icon">
 					<i class="fa fa-cutlery" aria-hidden="true"></i>
 				</li>
-				<li class="nav-item">
-					<button class="nav-button" id="brunch-nav-btn">Brunch</button>
-				</li>
-					<li class="nav-item">
-					<button class="nav-button" id="lunch-nav-btn">Lunch</button>
-				</li>
-					<li class="nav-item">
-					<button class="nav-button" id="dinner-nav-btn">dinner</button>
-				</li>
-				</li>
-					<li class="nav-item">
-					<button class="nav-button" id="dessert-nav-btn">dessert</button>
-				</li>
-				<li class="nav-item" id="middle-menu-icon" >
-					<i class="fa fa-list-alt" aria-hidden="true"></i>
-					Menu
+				<li class="nav-item">Food/drinks:
+					<select class="menu-dropdown">
+					  <option value="food-menu-item">Food</option>
+					  <option value="drinks-menu-item">Drinks</option>
+					</select>
 				</li> 
-				<li class="nav-item">
-					<button class="nav-button" id="food-nav-btn">food</button>
-				</li> 
-				<li class="nav-item">
-					<button class="nav-button" id="drinks-nav-btn">drinks</button>
-				</li> 
-				<li class="nav-icon float-right" id="search-icon">
+				<li class="nav-icon">
+					<i class="fa fa-list-ul" aria-hidden="true"></i>
+				</li>
+				<li class="nav-icon">
 					<i class="fa fa-search" aria-hidden="true"></i>
 				</li>
 			</ul>
@@ -80,12 +72,16 @@
 					<input type="text" name="special-instructions-input-box" class="instructions-input-box" placeholder="E.g. no salt..." size="43">			
 				<br>
 				</div>
+
 				<div class="popup-add-button-quantity-div">
 					Quantity:
-					<button class="quantity-button" id="1-eggs-quantity">1</button>
-					<button class="quantity-button" id="2-eggs-quantity">2</button>
-					<button class="quantity-button" id="3-eggs-quantity">3</button>
-					<button class="add-button" id="add-eggs-from-popup">Add</button>	
+					<select id="add-quantity-dropdown">
+					  <option value="quantity-1">1</option>
+					  <option value="quantity-2">2</option>
+					  <option value="quantity-3">3</option>
+					  <option value="quantity-4">4</option>
+					</select>
+					<button class="add-button" id="add-works-from-popup">Add</button>	
 				</div>
 			</div> <!-- end main content wrapper for ad items pop-up-box -->
 		</div> <!-- end add popup for eggs -->
